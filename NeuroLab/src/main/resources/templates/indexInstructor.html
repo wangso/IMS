@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymleaf.org">
+
+<th:block th:include="fragments/header :: header"></th:block>
+ 
+<body ng-app="mainApp" class="instructor_page" >
+<div id="cover" ></div>
+<input type="hidden" id="userSessionVO" name="userSessionVO" th:value='${userSessionVO}' />
+<input type="hidden" id="userVerified" name="userVerified" th:value='${userVerified}' />
+<input type="hidden" id="status" name="status" th:value='${status}' />
+
+	<th:block th:include="fragments/header_navbar :: header_navbar"></th:block>
+
+	<!-- Page content -->
+	<div class="page-content">
+		
+		<div ng-controller="loadController" ></div>
+		<th:block th:include="fragments/menuInstructor :: menuInstructor"></th:block>
+
+
+		<!-- Main content -->
+		<div class="content-wrapper">
+			<th:block th:include="fragments/page_header:: page_header"></th:block>
+
+			<div class="content" ng-view="">
+			</div>
+
+		</div>
+		<!-- /dashboard content -->
+
+	</div>
+	<!-- /content area -->
+
+	<th:block th:include="fragments/footer :: footer"></th:block>
+
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+
+<section class="section pt-0 position-relative pull-top">
+   <div class="container rounded shadow  bg-white" style="min-height: 450px;">
+      <div class="">
+	
+         <div class="row" ng-controller='newEnvironmentForm' >
+			
+			<div class=" col-md-12 title-header">Create New Environment
+	     
+	     	</div>
+			
+					
+			
+	            <div class="col-md-6 mb-6 mb-md-0 text-center" >
+	            <br>
+	               <form method="POST" name="newEnv">
+					 <table style="width:100%;" class="form-group">
+         				<tr>
+          					<td style="width:20%">Environment Name*</td>
+           					<td style="width:80%;padding: 20px 0px;"><input  required="required" class="form-control"  ng-model="env.environmentName" placeholder="MyEnvironment"/>
+           					</td>
+         				</tr>
+      					<tr> 
+							<td style="width:20%">Environment Type*</td>
+							<td style="width:80%;padding: 20px 0px;">
+								<select  id="envType" class="form-control" required="required" ng-model="env.moduleName"  >
+								   	 <option value="" label="-Please Select-" selected="selected"/>
+									 <option ng-repeat="allModule in allModules" >{{allModule.moduleName}}</option>  
+	                			</select>
+							</td>
+						</tr>
+						<tr>
+							<td style="width:40%;text-align: right;padding: 20px 0;">
+							
+									<a class="btn btn-secondary" type="submit" href="#!/myenv" >Back</a>&nbsp;&nbsp;
+							 </td>
+							 <td style="width:60%;text-align: left;padding: 15px 0;">
+							 	<input class="btn btn-primary "  type="submit" ng-click="createNewEnvironment(env)" value="Create Environment">
+							 	
+							 </td>
+						</tr>
+	                 </table> 
+				  </form>
+			    </div>	
+
+				 <div class="col-md-6 mb-6 mb-md-0 " style="padding: 40px 20px;">
+				 	<div ng-show="env.moduleName == 'tylerbanks/neurolab:0.1.0'" class="env_info" >
+				 		<h4>Information</h4>
+				 		<p>tylerbanks/neurolab:1.0.1</p>
+				 		<p>Base computational neuroscience environment, provides the following tools</p>
+				 		<ul>
+				 			<li>NEURON</li>
+				 			<li>Anaconda with Python 3.6, 3.7</li>
+							<li>Jupyter Notebook</li>
+							<li>BMTK</li>
+							<li>BMTools</li>
+				 		</ul>
+				 		<a href="https://hub.docker.com/r/tylerbanks/neurolab" target="_blank">https://hub.docker.com/r/tylerbanks/neurolab</a>
+				 	</div>
+				 </div>			    
+         </div>
+		
+      </div>
+   </div>
+</section>

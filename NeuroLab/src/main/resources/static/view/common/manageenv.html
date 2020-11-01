@@ -1,0 +1,60 @@
+<section class="section pt-0 position-relative pull-top">
+   <div class="container rounded shadow bg-white"  style="min-height: 450px;">
+      <div class="">
+	    
+         <div class="row " ng-controller='envInstController' >
+         	 <div class=" col-md-12 title-header">My Environments
+	     
+	     	</div>
+			<div class="col-md-12" >
+				<br/>
+				<a href="#!/newEnvTypeForm" class="btn btn-primary newenv"><b>Add New Environment Type</b></a>
+			</div>	
+					
+			
+			<div class="col-md-12 mb-12 mb-md-0 text-center ">
+				<br/>
+				
+               	
+               	<table style="width:100%" class="table">
+					<thead class="thead-dark"><tr >
+          			  <th style="width:4%">#</td>
+          			  <th style="width:15%">Docker Image Name</td>
+          			  <!-- <th style="width:15%">Environment Type</td>
+          			  <th style="width:20%">User</th>
+          			  <th style="width:10%">Status</td>
+          			  <th style="width:12%">Expiration</td> -->
+          			  <th style="width:34%">Commands</td>
+         			</tr></thead>
+         			<tbody>
+					<tr ng-repeat="module in modules">
+					  <td>{{($index+1)}}</td>
+					  <td> {{module.moduleName}}</td>
+          			  <!-- <td> {{userModule.module.moduleName}}</td>
+          			  <td> {{userModule.user.userName}}</td>
+          			  <td> {{userModule.dockerStatus}}</td>
+          			  <td> {{userModule.module.expirationDt}}</td> -->
+          			  <td> 
+							<a class="icon-link launch-link" href="javascript:void(0);" ng-click="updateModule(module.moduleId);" >
+								<i class="fa fa-pencil"></i>&nbsp;Edit</a>
+								
+							<a class="icon-link delete-link "  href="javascript:void(0);" ng-click="deleteModule(module);">
+								<i class="fa fa-trash"></i>&nbsp;Delete</a>
+          			  	
+          			 </td>
+         			</tr>
+         		</tbody>
+				</table>
+				<br>
+            </div>
+        </div>
+		
+      </div>
+   </div>
+</section>
+
+<style>
+ .table tbody td{
+   	    border: 1px solid #ddd;
+   }
+</style>

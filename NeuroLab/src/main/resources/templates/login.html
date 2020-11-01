@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymleaf.org">
+
+<th:block th:include="fragments/header :: header"></th:block>
+
+<body ng-app="mainApp" class="login_page">
+
+	<!-- Page content -->
+	<div class="page-content">
+
+		<!-- Main content -->
+		<div class="content-wrapper">
+
+			<div class="content">
+				<div class="row login-row">
+					<div class="col-md-6 col-xl-8 "></div>
+					<div class="col-md-6 card col-xl-4 login">
+						<div class="card-header">
+							<div>
+								<div style="width: 40px;overflow:hidden;position: relative;left: 55px;">
+									<img style="width: 155px;height: 55px !important;margin: 0px;" class="logo_img" th:src="@{/img/MUstacked.png}" alt="" />
+								</div>
+								<span
+									class="logo_span">Neurolab</span>
+							</div>
+						</div>
+						<div class="card-body" ng-controller="loginController">
+							<form>
+								<br /> <br />
+
+								<div class="form-group">
+									<a id="github-button" ng-click="doLogin()"
+										class="btn btn-block btn-social btn-github"> <i
+										class="fa fa-github"></i> Sign Up
+									</a>
+								</div>
+								<br />
+							</form>
+							<form>
+								<br /> <br />
+
+
+								<div class="form-group">
+									<a id="github-button" ng-click="doLogin()"
+										class="btn btn-block btn-social btn-github"> <i
+										class="fa fa-github"></i> Sign in
+									</a>
+								</div>
+								<br />
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<!-- /dashboard content -->
+
+	</div>
+	<!-- /content area -->
+
+	<!-- 	<th:block th:include="fragments/footer :: footer"></th:block>
+ -->
+</body>
+</html>

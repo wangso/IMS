@@ -1,0 +1,79 @@
+<div th:fragment="menuInstructor" >
+	<!-- Main sidebar -->
+		<div class="sidebar sidebar-dark sidebar-main sidebar-expand-md">
+
+			<!-- Sidebar content --> 
+			<div class="sidebar-content">
+
+				<!-- Main navigation -->
+					<ul class="  main_menu" data-nav-type="accordion" ng-controller='menuController'>
+						<li class="nav-item ">
+							<a ng-click="loadMenu('/')" href="javascript:void(0);" class="nav-link " ng-class="menu['/']">
+								<span class="icon_div">
+									<i class="fa fa-home"></i>
+								</span>
+								<br/>
+								<!-- <span ng-show="menu['/'] == 'active'" class="active_menu" ></span> -->
+								<span class="text_div">Home</span>
+							</a>
+						</li>
+						<li class="nav-item ">
+							<a ng-click="loadMenu('manageenv')" href="javascript:void(0);" class="nav-link " ng-class="menu['manageenv']">
+								<span class="icon_div">
+									<i class="fa fa-desktop"></i>
+								</span>
+								<br/>
+								<!-- <span ng-show="menu['/'] == 'active'" class="active_menu" ></span> -->
+								<span class="text_div">Manage Environments</span>
+							</a>
+						</li>
+						
+						<li class="nav-item ">
+							<a ng-click="loadMenu('allenv')" href="javascript:void(0);" class="nav-link " ng-class="menu['allenv']">
+								<span class="icon_div">
+									<i class="fa fa-desktop"></i>
+								</span>
+								<br/>
+								<!-- <span ng-show="menu['/'] == 'active'" class="active_menu" ></span> -->
+								<span class="text_div">All Environments</span>
+							</a>
+						</li>
+						
+						<li class="nav-item ">
+							<a ng-click="loadMenu('manageUser')" href="javascript:void(0);" class="nav-link " ng-class="menu['manageUser']">
+								<span class="icon_div">
+									<i class="fa fa-users"></i>
+								</span>
+								<br/>
+								<!-- <span ng-show="menu['/'] == 'active'" class="active_menu" ></span> -->
+								<span class="text_div">Manage Users</span>
+							</a>
+						</li>
+						
+						
+						
+						
+						<!-- <li class="nav-item ">
+							<a ng-click="loadMenu('studentProgress')" href="javascript:void(0);" class="nav-link " ng-class="menu['studentProgress']">
+								<span class="icon_div">
+									<i class="fa fa-graduation-cap"></i>
+								</span>
+								<br/>
+								<span ng-show="menu['mycourses'] == 'active'"  class="active_menu" ></span>
+								<span class="text_div">Student Progress</span>
+							</a>
+						</li> -->
+						
+						
+					
+					</ul>
+				
+				<!-- /main navigation -->
+
+			</div>
+			<!-- /sidebar content -->
+			
+		</div>
+		<!-- /main sidebar -->
+	
+</div>
